@@ -19,6 +19,7 @@
       /*"t"memory",*/
       /*"t"cpu",*/
       "pulseaudio",
+      "bluetooth",
       "battery",
       "custom/powermenu"
     ],
@@ -110,21 +111,38 @@
       "interval": 3600,
       "exec": "exec $HOME/.config/waybar/checkupdate.sh"
     },
+    "upower#headset": {
+        "native-path": "/org/freedesktop/UPower/devices/headset_dev_98_34_8C_4B_B0_34",
+        "tooltip": false,
+        "format": "{percentage} 󰥈",
+        "show-icon": false
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": "󰥈 {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
     "pulseaudio": {
-      "format": "{icon} {volume}%",
-      "format-bluetooth": "{volume}% {icon}",
-      "format-muted": "",
-      "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": [" ", " "]
-      },
-      "scroll-step": 1,
-      "on-click": "pavucontrol"
+        "native-path": "/org/freedesktop/UPower/devices/headset_dev_98_34_8C_4B_B0_34",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " "]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
     },
     "clock": {
       //"format": "<span color=\"#56b6c2\"></span> {:%H:%M}",
