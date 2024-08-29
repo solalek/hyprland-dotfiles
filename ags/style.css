@@ -1,29 +1,61 @@
 window.bar {
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
+    background-color: #1e222a;
+    color: #eeeeef;
 }
 
 button {
-    min-width: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: transparent;
+    box-shadow: none;
+    color: #eeeeef;
+    text-shadow: none;
+    border: none;
+    background: #303643;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.clock,
+.workspaces {
+    color: #eeeeef;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    padding: 4px 8px;
+    background-color: #303643;
+    border-radius: 30px;
+    margin: 6px 2px;
 }
 
 button:active {
-    background-color: @theme_selected_bg_color;
+    padding: 0;
+    margin: 0;
+    background-color: #303643;
 }
 
 button:hover {
-    border-bottom: 3px solid @theme_fg_color;
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    box-shadow: inset 0 1px #ffffff;
 }
 
 label {
-    font-weight: bold;
+    font-family: "JetBrainsMonoNL NF";
+    font-weight: normal;
+    font-size: 16px;
 }
 
+.workspaces button {
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+
 .workspaces button.focused {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    color: #fa5aa4;
+}
+
+.workspaces button.hover {
 }
 
 .client-title {
