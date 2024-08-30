@@ -6,8 +6,8 @@
   padding: 0;
 }
 #waybar {
-  background: #1e222a;
-  color: #eeeeef;
+  background: #080808;
+  color: #bdbdbd;
   font-size: 16px;
   font-family: "JetBrainsMonoNL NF";
 }
@@ -21,7 +21,7 @@ button {
 
 #workspaces button {
   padding: 0 5px;
-  color: #eeeeef;
+  color: #bdbdbd;
   text-shadow: none;
   transition: 0.2s linear;
 }
@@ -44,7 +44,7 @@ button {
 #language,
 #network {
   padding: 4px 8px;
-  background-color: #303643;
+  background-color: #080808;
   border-radius: 30px;
   margin: 6px 2px;
 }
