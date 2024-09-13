@@ -3,9 +3,13 @@ const date = Variable("", {
 })
 
 export function Clock() {
-    return Widget.Label({
+    const label = Widget.Label({
         class_name: "clock",
         label: date.bind(),
     })
-}
 
+    return Widget.Button({
+        onClicked: (_, event) => App.toggleWindow('calendar'),
+        child: label,
+    })
+}

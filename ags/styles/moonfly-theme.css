@@ -1,0 +1,65 @@
+window.bar {
+    background-color: #080808;
+    color: #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+button {
+    box-shadow: none;
+    color: #bdbdbd;
+    text-shadow: none;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    background: #080808;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.clock,
+.workspaces {
+    color: #bdbdbd;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    padding: 4px 8px;
+    background-color: #080808;
+    border-radius: 30px;
+    margin: 6px 2px;
+}
+
+label {
+    font-family: "JetBrainsMonoNL NF";
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.workspaces button {
+    margin: 0px;
+    border-bottom: none;
+    padding: 0px 10px;
+}
+
+
+.workspaces button.focused {
+    color: #fa5aa4;
+
+}
+
+.workspaces button:hover {
+    border-bottom: none;
+    box-shadow: inset 0 1px #eef;
+}
+
+.client-title {
+    color: @theme_selected_bg_color;
+}
+
+.notification {
+    color: yellow;
+}
+
+levelbar block,
+highlight {
+    min-height: 10px;
+}

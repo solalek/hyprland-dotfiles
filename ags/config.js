@@ -1,14 +1,15 @@
 import { Bar } from "./panels/bar.js"
+import { menu_window } from "./windows/audio.js"
+import { window_calendar } from "./windows/calendar.js"
 
 App.config({
-    style: "./styles/custom.css",
+    style: "./styles/moonfly-theme.css",
     windows: [
         Bar(1),
-
-        // you can call it, for each monitor
-        // Bar(0),
-        // Bar(1)
-    ],
+        Bar(0),
+        menu_window(),
+        window_calendar(),
+    ]
 })
 
 export { }

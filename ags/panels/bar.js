@@ -1,6 +1,4 @@
-import { Center } from "../layouts/main-layout.js"
-import { Left } from "../layouts/main-layout.js"
-import { Right } from "../layouts/main-layout.js"
+import { Center, Right, Left } from "../layouts/main-layout.js"
 
 export function Bar(monitor = 0) {
     return Widget.Window({
