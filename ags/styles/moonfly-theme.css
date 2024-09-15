@@ -4,6 +4,12 @@ window.bar {
     border-bottom: 1px solid #bdbdbd;
 }
 
+box {
+    padding: 0px;
+    margin: 0px;
+}
+
+
 button {
     box-shadow: none;
     color: #bdbdbd;
@@ -16,22 +22,38 @@ button {
     padding: 0;
 }
 
+button:active {
+    box-shadow: none;
+    text-shadow: none;
+}
+
 .clock,
 .workspaces {
     color: #bdbdbd;
     box-shadow: none;
     text-shadow: none;
     border: none;
-    padding: 4px 8px;
+    padding: 4px 0px;
     background-color: #080808;
-    border-radius: 30px;
-    margin: 6px 2px;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.workspaces {
+    border-bottom: 1px solid #bdbdbd;
 }
 
 label {
     font-family: "JetBrainsMonoNL NF";
     font-weight: normal;
     font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.battery {
+    padding: 0px 2px;
+    margin: 0px;
 }
 
 .workspaces button {
@@ -63,3 +85,10 @@ levelbar block,
 highlight {
     min-height: 10px;
 }
+
+/* calendar { */
+/*     color: #bdbdbd; */
+/*     background-color: #080808; */
+/* } */
+
+

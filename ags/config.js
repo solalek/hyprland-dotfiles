@@ -1,13 +1,13 @@
 import { Bar } from "./panels/bar.js"
-import { menu_window } from "./windows/audio.js"
 import { window_calendar } from "./windows/calendar.js"
+import { SystemWindow } from "./windows/system.js"
 
 App.config({
     style: "./styles/moonfly-theme.css",
     windows: [
         Bar(1),
         Bar(0),
-        menu_window(),
+        SystemWindow(),
         window_calendar(),
     ]
 })
