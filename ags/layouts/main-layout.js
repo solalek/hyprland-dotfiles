@@ -1,15 +1,25 @@
-import { Clock } from "../widgets/clock.js"
-import { Workspaces } from "../widgets/workspaces.js"
-import { SysTray } from "../widgets/system-tray.js"
-import { NotificationPopups } from "../widgets/notification.js"
-import { PowerMenu } from "../widgets/powermenu.js"
-import { SysButton } from "../widgets/system.js"
+import { Clock } from "../widgets/BarWidgets/clock/clock.js"
+import { Workspaces } from "../widgets/BarWidgets/workspaces/workspaces.js"
+import { SysTray } from "../widgets/BarWidgets/system-tray/system-tray.js"
+import { NotificationPopups } from "../widgets/BarWidgets/notifications/notification.js"
+import { SysButton } from "../widgets/BarWidgets/system/system.js"
+
+const LeftWindowToggleButton = () => { 
+    const button = Widget.Button({
+        css: "margin: 0px 0px 0px 10px;",
+        on_primary_click: () => {
+            App.toggleWindow('MainMenu')
+        },
+        child: Widget.Label('⏻')
+    })
+    return button
+}
 
 export function Left(monitor) {
     return Widget.Box({
         spacing: 8,
         children: [
-            PowerMenu(),
+            LeftWindowToggleButton(),
             Workspaces(monitor),
         ],
     })
@@ -31,7 +41,6 @@ export function Right() {
         children: [
             SysTray(),
             SysButton(),
-            NotificationPopups(),
         ],
     })
 }

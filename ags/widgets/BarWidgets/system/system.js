@@ -1,16 +1,17 @@
-import { BatteryLabel } from "./battery.js"
-import { audio_label } from "./audio.js"
+import { BatteryBox } from "../battery/battery.js"
+import { icon } from "../Volume/icons.js"
 
 export function SysButton() {
 
     const button =  Widget.Button({
-        onClicked: (button, event) => {
+        class_name: "systemButton",
+        on_primary_click: () => {
             App.toggleWindow('system')
         },
         child: Widget.Box({
             children: [
-                audio_label(),
-                BatteryLabel(),
+                icon(),
+                BatteryBox(),
             ]
         }),
 
