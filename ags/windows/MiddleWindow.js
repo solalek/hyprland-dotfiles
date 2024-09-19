@@ -19,8 +19,8 @@ const MiddleWindowBox = Widget.Box({
 
 
 const MiddleWindow = Widget.Window({
-    name: 'calendar',
-    class_name: 'calendar-window',
+    name: 'calendar-menu',
+    class_name: 'calendar',
     anchor: ['top'],
     exclusivity: 'normal',
     keymode: 'none',

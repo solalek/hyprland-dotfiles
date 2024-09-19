@@ -7,6 +7,7 @@ export function Bar(monitor = 0) {
         monitor,
         anchor: ["top", "left", "right"],
         exclusivity: "exclusive",
+        layer: "background",
         child: Widget.CenterBox({
             start_widget: Left(monitor),
             center_widget: Center(),

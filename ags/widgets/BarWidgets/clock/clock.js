@@ -1,3 +1,5 @@
+import { showOverlay, hideOverlay, overlay } from "../../WindowsWidgets/Overlay/main.js"
+
 export function Clock() { 
     const date = Variable("", {
         poll: [1000, 'date "+%H:%M"'],
@@ -9,7 +11,14 @@ export function Clock() {
     })
 
     const button = Widget.Button({
-        on_primary_click: () => App.toggleWindow('calendar'),
+        on_primary_click: () => {
+            if (!overlay) {
+                showOverlay()
+            } else {
+                hideOverlay()
+            }
+            App.toggleWindow('calendar-menu')
+        },
         child: label,
     })
     return button

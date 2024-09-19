@@ -3,12 +3,18 @@ import { Workspaces } from "../widgets/BarWidgets/workspaces/workspaces.js"
 import { SysTray } from "../widgets/BarWidgets/system-tray/system-tray.js"
 import { NotificationPopups } from "../widgets/BarWidgets/notifications/notification.js"
 import { SysButton } from "../widgets/BarWidgets/system/system.js"
+import { showOverlay, hideOverlay, overlay } from "../widgets/WindowsWidgets/Overlay/main.js"
 
 const LeftWindowToggleButton = () => { 
     const button = Widget.Button({
         css: "margin: 0px 0px 0px 10px;",
         on_primary_click: () => {
-            App.toggleWindow('MainMenu')
+            if (!overlay) {
+                showOverlay()
+            } else {
+                hideOverlay()
+            }
+            App.toggleWindow('MainMenu-menu')
         },
         child: Widget.Label('⏻')
     })

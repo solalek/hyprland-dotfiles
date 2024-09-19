@@ -1,6 +1,8 @@
 import { SessionBox } from "../widgets/WindowsWidgets/Session/main.js"
 import { PowerMenu } from "../widgets/WindowsWidgets/PowerMenu/main.js"
 
+
+
 const SessionAndPowerMenu = Widget.Box({
     class_name: "SessionAndPowerMenu",
     vertical: false,
@@ -20,7 +22,7 @@ const main = Widget.Box({
 })
 
 const MainMenuWindow = Widget.Window({
-    name: 'MainMenu',
+    name: 'MainMenu-menu',
     class_name: 'MainMenu',
     anchor: ['top','left'],
     exclusivity: 'normal',
@@ -28,6 +30,7 @@ const MainMenuWindow = Widget.Window({
     margins: [10, 10],
     child: main,
     visible: false,
+
 })
 
 export { MainMenuWindow }
