@@ -1,4 +1,17 @@
-export let overlay = null;
+import { setMiddleClosed } from "../../BarWidgets/clock/clock.js"
+import { setRightClosed } from "../../BarWidgets/system/system.js"
+import { setLeftClosed } from "../../../layouts/main-layout.js"
+
+let overlay = null;
+let openedMenus = 0;
+
+export function MenuIsAdded() {
+    openedMenus += 1
+}
+
+export function MenuIsRemoved() {
+    openedMenus -= 1
+}
 
 export const closeAllMenus = () => {
     const menuWindows = App.windows
@@ -18,6 +31,14 @@ export const closeAllMenus = () => {
     });
 };
 
+export const IsAnyMenuOpen = () => {
+     // Return true if any menus are open, otherwise false
+    const windows = App.get_windows()
+    print(windows.name)
+    return openedMenus > 0;
+};
+
+
 export function createOverlay() {
     return Widget.Window({
         name: 'Overlay',
@@ -31,9 +52,13 @@ export function createOverlay() {
                 background-color: rgba(0, 0, 0, 0.5); 
                 border: none;
             `,
-            onClicked: () => {
+            on_primary_click: () => {
                 closeAllMenus()
+                // setLeftClosed()
+                // setRightClosed()
+                // setMiddleClosed()
                 hideOverlay()
+                // openedMenus = 0
             }
         }),
         visible: true,

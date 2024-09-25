@@ -80,9 +80,30 @@ label {
     color: yellow;
 }
 
-levelbar block,
 highlight {
-    min-height: 10px;
+    min-height: 5px;
+}
+
+levelbar block {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+levelbar block.filled {
+    margin: 0;
+    padding: 0;
+}
+
+levelbar block.empty {
+    background-color: #bdbdbd;
+}
+
+levelbar trough {
+    background-color: #080808;
+    border: none;
 }
 
 window.mainMenu {
@@ -203,6 +224,25 @@ window.calendar-window {
 
 .bluetoothButtonsBox,
 .wifiButtonsBox {
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
     background-color: #bdbdbd;
     border-radius: 10px;
 }
+
+.AppButton {
+    background-color: #080808;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.SystemStatsWidget {
+    background-color: #080808;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+

@@ -13,6 +13,8 @@ const createBarsForMonitors = () => {
 
 App.config({
     style: "./styles/moonfly-theme.css",
+    icons: "./assets",
+    iconTheme: "Papirus-Dark",
     windows: [
         ...createBarsForMonitors(),
         // Bar(0),

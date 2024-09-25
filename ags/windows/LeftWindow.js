@@ -1,11 +1,10 @@
 import { SessionBox } from "../widgets/WindowsWidgets/Session/main.js"
 import { PowerMenu } from "../widgets/WindowsWidgets/PowerMenu/main.js"
-
-
+import { AppBox } from "../widgets/WindowsWidgets/AppLauncher/main.js"
+import { SystemStatsWidget } from "../widgets/WindowsWidgets/SystemStats/main.js"
 
 const SessionAndPowerMenu = Widget.Box({
     class_name: "SessionAndPowerMenu",
-    vertical: false,
     spacing: 5,
     children: [
         SessionBox,
@@ -13,11 +12,15 @@ const SessionAndPowerMenu = Widget.Box({
     ]
 })
 
+
 const main = Widget.Box({
+    spacing: 5,
     class_name: "main-box",
     vertical: true,
     children: [
         SessionAndPowerMenu,
+        AppBox,
+        SystemStatsWidget()
     ]
 })
 
