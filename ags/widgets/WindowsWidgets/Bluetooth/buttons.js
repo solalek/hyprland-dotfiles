@@ -33,8 +33,8 @@ const indicator = () => {
 
 const BluetoothToggleButton = Widget.Button({
     css: `
-        border-top-left-radius: 10px; 
-        border-bottom-left-radius: 10px;
+        border-radius: 10px;
+        min-height: 40px;
     `,
     child: indicator(),
     hexpand: true,

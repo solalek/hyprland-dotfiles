@@ -18,7 +18,7 @@ const CpuUsageWidget = () => {
                         vpack: "center",
                         hexpand: true,
                     }).poll(1000, (self) => {
-                        self.value = getCpuUsage().usage
+                        self.value = getCpuUsage().usage/100
                     }),
                     Widget.Box({
                         halign: 2,
@@ -26,7 +26,7 @@ const CpuUsageWidget = () => {
                             Widget.Label({
                                 css: "font-size: 15px;"
                             }).poll(1000, (self) => {
-                                self.label = `${getCpuUsage().usage*100}%  `
+                                self.label = `${getCpuUsage().usage}%  `
                             }),
                             Widget.Label({
                                 css: "font-size: 15px;"

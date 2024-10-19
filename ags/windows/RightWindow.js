@@ -2,7 +2,6 @@ import { vol } from "../widgets/WindowsWidgets/Volume/main.js"
 import { BrightnessBox } from "../widgets/WindowsWidgets/Brightness/main.js"
 import { WifiButtonsBox } from "../widgets/WindowsWidgets/Network/main.js"
 import { BluetoothButtonsBox } from "../widgets/WindowsWidgets/Bluetooth/main.js"
-import { flowBox } from "../widgets/WindowsWidgets/System/flowBox.js"
 
 const WifiBluetoothButtons = Widget.Box({
     homogeneous: true,
@@ -22,7 +21,6 @@ const SystemBox = Widget.Box({
         vol,
         BrightnessBox,
         WifiBluetoothButtons,
-        flowBox,
     ]
 })
 

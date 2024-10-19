@@ -1,7 +1,7 @@
 
 // Function to get CPU usage (this is just a placeholder, replace with actual system command)
 export const getCpuUsage = () => {
-    const usage = parseFloat(Utils.exec(`bash -c ~/.local/bin/cpu_usage.sh`))/100
+    const usage = parseFloat(Utils.exec(`bash -c ~/.local/bin/cpu_usage.sh`))
     return {
         usage: usage.toFixed(2), // Return usage as a percentage
     };

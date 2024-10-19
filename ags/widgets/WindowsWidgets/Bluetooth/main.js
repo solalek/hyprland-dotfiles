@@ -6,7 +6,6 @@ const BluetoothButtonsBox = Widget.Box({
     homogeneous: false,
     children: [
         BluetoothToggleButton,
-        BluetoothShowButton,
     ]
 })
 
