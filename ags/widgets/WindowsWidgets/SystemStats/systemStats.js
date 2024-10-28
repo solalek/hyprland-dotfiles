@@ -1,7 +1,7 @@
 
 // Function to get CPU usage (this is just a placeholder, replace with actual system command)
 export const getCpuUsage = () => {
-    const usage = parseFloat(Utils.exec(`bash -c ~/.local/bin/cpu_usage.sh`))
+    const usage = parseFloat(Utils.exec(`bash -c ~/bin/cpu_usage.sh`))
     return {
         usage: usage.toFixed(2), // Return usage as a percentage
     };
@@ -11,7 +11,7 @@ export const getCpuUsage = () => {
 
 // Function to get CPU temperature (placeholder for actual command)
 export const getCpuTemperature = () => {
-    const temp = parseFloat(Utils.exec(`bash -c ~/.local/bin/cpu_temperature.sh`));
+    const temp = parseFloat(Utils.exec(`bash -c ~/bin/cpu_temperature.sh`));
     return {
         temp: temp, // Return temperature
     };

@@ -2,7 +2,7 @@ import { Bar } from "./panels/bar.js"
 import { MiddleWindow } from "./windows/MiddleWindow.js"
 import { SystemWindow } from "./windows/RightWindow.js"
 import { MainMenuWindow } from "./windows/LeftWindow.js"
-import { NotificationPopups } from "./widgets/BarWidgets/notifications/notification.js"
+// import { NotificationPopups } from "./widgets/BarWidgets/notifications/notification.js"
 
 const hyprland = await Service.import('hyprland');
 
@@ -17,12 +17,10 @@ App.config({
     iconTheme: "Papirus-Dark",
     windows: [
         ...createBarsForMonitors(),
-        // Bar(0),
-        // Bar(1),
         SystemWindow,
         MiddleWindow,
         MainMenuWindow,
-        NotificationPopups(),
+        // NotificationPopups(),
     ],    
 })
 

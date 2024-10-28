@@ -1,7 +1,7 @@
 function getSessionInfo() {
     const username = Utils.exec("whoami").trim();
     const hostname = Utils.exec("hostname").trim();
-    const sessionType = Utils.exec(`bash -c ~/.local/bin/xdg_session_type.sh`).trim();
+    const sessionType = Utils.exec(`bash -c ~/bin/xdg_session_type.sh`).trim();
 
     return {
         username,
