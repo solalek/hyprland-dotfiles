@@ -6,10 +6,13 @@
   padding: 0;
 }
 #waybar {
-  background: #080808;
-  color: #bdbdbd;
+  background: #191c1d;
+  /* background: #080808; */
+  /* color: #bdbdbd; */
+  color: #e0e3e3;
   font-size: 16px;
   font-family: "JetBrainsMonoNL NF";
+  box-shadow: 0 0 4px 2px #000000;
   border-bottom: 1px solid #bdbdbd;
 }
 
@@ -17,18 +20,22 @@ button {
   border: none;
   border-radius: 0;
   background: transparent;
+  /* background: green; */
   color: transparent;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  color: #bdbdbd;
+  padding: 0 0.55rem;
+  /* color: #bdbdbd; */
+  color: #e0e3e3;
   text-shadow: none;
   transition: 0.2s linear;
 }
 
 #workspaces button.active {
-  color: #fa5aa4;
+  color: #080808;
+  background-color: #bdbdbd;
+  border-radius: 0.5rem;
 }
 
 #custom-powermenu,
@@ -40,14 +47,16 @@ button {
 #window,
 #bluetooth,
 #pulseaudio,
-#custom-updates,
+#custom-battery_volume,
+#custom-notification,
 #battery,
 #language,
 #network {
-  padding: 4px 8px;
+  padding: 2px 8px;
   background-color: #080808;
+  background-color: transparent;
   border-radius: 30px;
-  margin: 6px 2px;
+  margin: 2px 2px;
 }
 
 #window {
@@ -58,14 +67,16 @@ button {
   margin-left: 4px;
 }
 
-#custom-updates {
-  color: #1788e4;
+#custom-notification {
+    margin-right: 4px;
 }
 
 #custom-powermenu {
   color: #e06c75;
-  padding-right: 11px;
-  margin-right: 8px;
+  padding-right: 2px;
+  font-size: 20;
+  margin-right: 2px;
+  margin-left: 5px;
 }
 
 
@@ -75,6 +86,7 @@ button {
   padding-left: 4px;
 }
 
+#custom-battery_volume,
 #pulseaudio {
   color: #0fb9b1;
 }
@@ -97,7 +109,8 @@ button {
 }
 
 #clock {
-  color: #bdbdbd;
+  /* color: #bdbdbd; */
+  color: #e0e3e3;
   /*margin-left: 8px;*/
   /* opacity: 0.7; */
   /* font-size: 18px; */

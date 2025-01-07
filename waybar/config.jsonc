@@ -1,0 +1,156 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "hyprland/workspaces",
+        "cpu",
+        "memory"
+    ],
+    "modules-center": [
+        "clock",
+    ],
+    "modules-right": [
+        "tray",
+        "hyprland/language",
+        "battery",
+        "pulseaudio"
+    ],
+    "tray": {
+        "enabled": true,
+        "icon-size": 24,
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": "󱐌 {capacity}%",
+        "format-plugged": "{capacity}% ",
+        "format-good": "{icon}{capacity}%", // An empty format will hide the module
+        "format-full": "{icon}{capacity}",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip": false,
+    },
+    "hyprland/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "hyprland/language": {
+        "format": "{short}",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    },
+    "hyprland/window": {
+        "format": "<span style=\"italic\">{}</span>",
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        // "format": "{name}:{icon} ",
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "network": {
+        "interface": "wlan0",
+        "tooltip-format-ethernet": "{ifname} ",
+        "interval": 2,
+        "format": " {bandwidthDownBits}  {bandwidthUpBits}",
+    },
+    "temperature": {
+        "format": "{icon} {temperatureC}°C",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-icons": ["", "", ""]
+    },
+    "memory": {
+        // "format": "  {}%",
+        "format": " {}%",
+        "tooltip": "false"
+    },
+    "cpu": {
+        // "format": " {usage}%",
+        "format": " {usage}%",
+        "tooltip": "false"
+    },
+    "custom/powermenu": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "~/.config/eww/scripts/toggle_powermenu.sh",
+    },
+    "custom/notification": {
+        "format": "󰂚",
+        "tooltip": false,
+        // "on-click": "swaync-client -t",
+        "on-click": "~/.config/eww/scripts/toggle_control_center.sh",
+    },
+    "upower#headset": {
+        "native-path": "/org/freedesktop/UPower/devices/headset_dev_98_34_8C_4B_B0_34",
+        "tooltip": false,
+        "format": "{percentage} 󰥈",
+        "show-icon": false
+    },
+    "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} {volume}% {format_source}",
+      "format-bluetooth-muted": " {format_source}",
+      "format-muted": "  {format_source}",
+      "format-source": " {volume}%",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "🎧",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [" ", " ", " "]
+      },
+      "on-click": "pavucontrol"
+    },
+    // "pulseaudio": {
+    //     "native-path": "/org/freedesktop/UPower/devices/headset_dev_98_34_8C_4B_B0_34",
+    //     "format": "{icon} {volume}%",
+    //     // "format": "{icon}",
+    //     "format-bluetooth": " {volume}%",
+    //     "format-muted": " {volume}%",
+    //     "format-icons": {
+    //         "headphone": " ",
+    //         "hands-free": "",
+    //         "headset": "",
+    //         "phone": "",
+    //         "portable": "",
+    //         "car": "",
+    //         "default": ["", ""]
+    //     },
+    //     "scroll-step": 1,
+    //     "on-click": "~/.config/eww/scripts/toggle_quick_settings.sh"
+    // },
+    "clock": {
+        // "format": "{%A \\ %H:%M / %d.%m.%y}",
+        // "format": "{%A  :%H:%M}",
+        "format": "{:%A \\ %H:%M / %d.%m.%y}", // Icon: calendar-alt
+        "tooltip": false,
+        "interval": 60,
+        "timezone": "Asia/Almaty",
+        // "on-click": "~/.config/eww/scripts/toggle_date_center.sh"
+    },
+}
+

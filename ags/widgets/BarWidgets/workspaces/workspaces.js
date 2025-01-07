@@ -5,7 +5,8 @@ export function Workspaces(monitor) {
     const workspaceIcons = {
         "1": "",
         "2": "",
-        "3": "",
+        // "3": "",
+        "3": "",
         "4": "",
         "8": "",
         "9": "",
