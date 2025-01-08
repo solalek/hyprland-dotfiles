@@ -1,5 +1,4 @@
 * {
-  /* border: none; */
   border-radius: 0;
   min-height: 0;
   margin: 0;
@@ -7,8 +6,6 @@
 }
 #waybar {
   background: #191c1d;
-  /* background: #080808; */
-  /* color: #bdbdbd; */
   color: #e0e3e3;
   font-size: 16px;
   font-family: "JetBrainsMonoNL NF";
@@ -20,13 +17,11 @@ button {
   border: none;
   border-radius: 0;
   background: transparent;
-  /* background: green; */
   color: transparent;
 }
 
 #workspaces button {
   padding: 0 0.55rem;
-  /* color: #bdbdbd; */
   color: #e0e3e3;
   text-shadow: none;
   transition: 0.2s linear;
@@ -34,7 +29,9 @@ button {
 
 #workspaces button.active {
   color: #080808;
-  background-color: #bdbdbd;
+  /* background-color: #bdbdbd; */
+  /* background-color: #716ef1; */
+  background-color: #cf87e8;
   border-radius: 0.5rem;
 }
 
@@ -50,7 +47,10 @@ button {
 #custom-battery_volume,
 #custom-notification,
 #battery,
+#custom-ddcutil,
 #language,
+#backlight,
+#custom-backlight,
 #network {
   padding: 2px 8px;
   background-color: #080808;
@@ -86,21 +86,27 @@ button {
   padding-left: 4px;
 }
 
-#custom-battery_volume,
-#pulseaudio {
-  color: #0fb9b1;
-}
+/* #pulseaudio { */
+/*   color: #FFD75C; */
+/* } */
 
+#clock,
 #cpu {
-  color: #61afef;
+  /* color: #61afef; */
+  color: #74b2ff;
 }
 
+#pulseaudio,
 #temperature {
-  color: #98c379;
+  /* color: #98c379; */
+  color: #85dc85;
 }
 
+#backlight,
+#custom-ddcutil,
 #memory {
-  color: #e5c07b;
+  color: #e3c78a;
+  /* color: #e5c07b; */
 }
 
 #network {
@@ -108,10 +114,20 @@ button {
   min-width: 200px;
 }
 
-#clock {
-  /* color: #bdbdbd; */
-  color: #e0e3e3;
-  /*margin-left: 8px;*/
-  /* opacity: 0.7; */
-  /* font-size: 18px; */
+/* #clock { */
+/*   color: #61aeee; */
+/* } */
+
+#battery {
+    /* color: #716EF1; */
+    color: #ae81ff;
+}
+
+/* #backlight { */
+/*     color: #8fbf5b; */
+/* } */
+
+#language {
+    /* color: #4caf7d; */
+    color: #80a0ff;
 }
